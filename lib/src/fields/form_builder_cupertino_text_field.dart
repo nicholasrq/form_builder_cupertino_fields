@@ -164,6 +164,15 @@ class FormBuilderCupertinoTextField extends FormBuilderField<String> {
   /// {@macro flutter.widgets.editableText.scrollPadding}
   final EdgeInsets scrollPadding;
 
+  /// A lighter colored placeholder hint that appears on the first line of the
+  /// text field when the text entry is empty.
+  ///
+  /// Defaults to having no placeholder text.
+  ///
+  /// The text style of the placeholder text matches that of the text field's
+  /// main text entry except a lighter font weight and a grey font color.
+  final String? placeholder;
+
   /// {@macro flutter.widgets.editableText.enableInteractiveSelection}
   final bool enableInteractiveSelection;
 
@@ -328,6 +337,7 @@ class FormBuilderCupertinoTextField extends FormBuilderField<String> {
     this.smartDashesType,
     this.smartQuotesType,
     this.selectionHeightStyle = ui.BoxHeightStyle.tight,
+    this.placeholder = '',
     this.autofillHints,
     this.obscuringCharacter = '•',
     this.contextMenuBuilder = _defaultContextMenuBuilder,
@@ -404,6 +414,7 @@ class FormBuilderCupertinoTextField extends FormBuilderField<String> {
               keyboardAppearance: keyboardAppearance,
               enableInteractiveSelection: enableInteractiveSelection,
               dragStartBehavior: dragStartBehavior,
+              placeholder: placeholder,
               scrollController: scrollController,
               scrollPhysics: scrollPhysics,
               selectionHeightStyle: selectionHeightStyle,
